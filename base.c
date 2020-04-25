@@ -199,6 +199,34 @@ void updateBook(Record *records[], int count) {
 }
 
 
+void makeReport(Record *records[], int count) {
+  FILE* fp1;
+  fp1 = fopen("save.log","rt");
+  int i;
+  for (i=0; i<count; i++) {
+    records[i] = malloc(sizeof(Record));
+    fscanf(fp1, "%d %s %d %[^\n]s", &records[i]->price, records[i]->author, &records[i]->year, records[i]->title);
+   
+  }
+  FILE* fp2;
+  fp2 = fopen("report.txt","wt");
+  fprintf(fp2,"====================Book List====================\n");
+  for (i=0; i<count; i++) {
+    fprintf(fp2, "Book %d.\n",i+1);
+    fprintf(fp2, "\tBook title: %s\n",records[i]->title);
+    fprintf(fp2, "\tBook's author: %s\n",records[i]->author);
+    fprintf(fp2, "\tBook's publication year: %d\n",records[i]->year);
+    fprintf(fp2, "\tBook's price: %d\n",records[i]->price);
+    fprintf(fp2, "------------------------------------------------\n");
+  }
+  fclose(fp1);
+  fclose(fp2);
+
+  printf("Create Successfully!!\n\n");
+
+  
+}
+
 
 void freeBooks(Record *records[], int count) {
   int i;
