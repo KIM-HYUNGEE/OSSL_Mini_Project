@@ -44,6 +44,8 @@ void main_handler(char input[], Record *records[], int count){
 		purchaseBook(records, count);	
   	else if(!strcmp(input, "3"))
     		updateBook(records, count);
+	 else if(!strcmp(input, "4"))
+    		makeReport(records, count);
 	else if(!strcmp(input, "99")){
     		freeBooks(records, count);
 		printf("Terminating... bye!\n"); 
@@ -69,6 +71,7 @@ void display_menu(){
 	printf(" 1. Register the Book\n");
 	printf(" 2. Apply for the Book\n");
   	printf(" 3. Update the Book Price (Administrator Mode)\n");
+	printf(" 4. Create the Report of books\n");
 	printf(" 99. Quit\n");
 }
 
