@@ -25,6 +25,9 @@ void selectBook(Record *records[], int count);
 void updateBook(Record *records[], int count); // Update
 
 
+void makeReport(Record *records[], int count); // Read
+
+
 void freeBooks(Record *records[], int count);
 
 
