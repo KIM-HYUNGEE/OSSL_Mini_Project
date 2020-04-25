@@ -67,7 +67,7 @@ void display_menu(){
 	printf(" Online Secondhand Book Market System \n");
 	printf("**************************************\n");
 	printf(" 1. Register the Book\n");
-	printf(" 2. Purchase the Book\n");
+	printf(" 2. Apply for the Book\n");
   	printf(" 3. Update the Book Price (Administrator Mode)\n");
 	printf(" 99. Quit\n");
 }
