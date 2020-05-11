@@ -26,6 +26,26 @@
 // 	printf("display_stats(): this function needs to be implemented\n\n"); // TODO: Remove this line
 // }
 
+// new fucnt by SJc
+void advanced_search(Record *records[], int count){
+  int year = 0, price = 0;
+ 
+  printf("\n Total %d books left. \n", count);
+  printf("----------------------\n");
+  for (int i=0; i<count; i++) {
+    printf("%2d. %s (%s) %d [price: %d]\n\n", i+1, records[i]->title, records[i]->author, records[i]->year, records[i]->price);
+  } 
+  
+  printf("\nType the year and price you want to search for: ");
+  scanf("%d %d", &year, &price);
+
+  int cnt = 1;
+  for(int i = 0; i < count; i++){
+    if(records[i]->year == year && records[i]->price == price){
+      printf("%d. %s (%s) %d [price: %d] \n", cnt, records[i]->title, records[i]->author, records[i]->year, records[i]->price);
+    } 
+  }
+}
 
 void searchBook(Record *records[], int count) {
   char searchInput[30];

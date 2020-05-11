@@ -46,6 +46,8 @@ void main_handler(char input[], Record *records[], int count){
     		updateBook(records, count);
 	 else if(!strcmp(input, "4"))
     		makeReport(records, count);
+	else if(!strcmp(input, "5"))	// new func
+		advanced_search(records, count);
 	else if(!strcmp(input, "99")){
     		freeBooks(records, count);
 		printf("Terminating... bye!\n"); 
@@ -72,6 +74,7 @@ void display_menu(){
 	printf(" 2. Apply for the Book\n");
   	printf(" 3. Update the Book Price (Administrator Mode)\n");
 	printf(" 4. Create the Report of books\n");
+	printf(" 5. Advanced search (new)\n");
 	printf(" 99. Quit\n");
 }
 

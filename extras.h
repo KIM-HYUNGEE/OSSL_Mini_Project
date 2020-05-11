@@ -7,6 +7,9 @@
 // int defragment(Record[]);
 // void display_stats(Record[]);
 
+//new func by SJc
+void advanced_search(Record *records[], int count);
+
 // search system (일부 검색도 가능)
 void searchBook(Record *records[], int count);
   void searchHandler(char input[], Record *records[], int count);
