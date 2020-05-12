@@ -32,7 +32,12 @@ Make makefile to compile the project code easily
 Developer Info
 --------------
 > Developer: Kim Hyungee 
+
 > University: Handong Global University (21900215)
+
 > Development Period: 2020-04-01 ~ 2020-05-01
+
 > Email: 21900215@handong.edu
+
 > Phone Number: 010-xxxx-xxxx
+
